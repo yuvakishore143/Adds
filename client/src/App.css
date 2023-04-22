@@ -1,0 +1,122 @@
+body {
+  padding: 20px;
+  margin: 0px;
+}
+
+
+
+.app-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.input {
+  width: 230px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  background-color: gray;
+  height: 30px;
+  width: 70px;
+  position: absolute;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  right: 0px
+}
+
+form {
+  border: 1px solid black;
+  position: relative;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+form:focus {
+  outline-offset: 2px;
+
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px auto;
+}
+
+.card {
+  width: 350px;
+  height: 550px;
+  overflow-y: auto;
+  margin: 20px 30px;
+  position: relative;
+  transition: all .2s ease-in;
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: whitesmoke;
+}
+
+.card:hover img {
+  width: calc(100% - 20px);
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.img {
+  width: 100%;
+  transition: all .2s ease-in;
+}
+
+.company-name {
+  font-size: 20px;
+}
+
+.company-title-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 10px;
+}
+
+.company-info-cont {
+  margin: 0px 10px;
+}
+
+.headline {
+  font-size: 18px;
+}
+
+.cta {
+  position: absolute;
+  bottom: 5px;
+  font-weight: bold;
+}
+
+.no-data-found {
+  color: red;
+}
+
+.err-cont {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
