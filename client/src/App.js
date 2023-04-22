@@ -7,7 +7,7 @@ const App = () => {
   const [receivedData , setReceivedData] = useState([])
 
 
-console.log(receivedData)
+
   const fetchingData = async() =>{
     const ele = searchInput
     const options = {
@@ -24,7 +24,7 @@ console.log(receivedData)
 
   useEffect(()=>{
     fetchingData()
-  },[])
+  },[searchInput])
 
   const OnFormSubmit = (e) =>{
     e.preventDefault()
@@ -34,7 +34,7 @@ console.log(receivedData)
   return(
     <div className='app-page'>
       <form onSubmit = {OnFormSubmit}>
-        <input type='search' onChange={(e)=>setSearchInput(e.target.value)} value = {searchInput} className = 'input' />
+        <input type='search' onChange={(e) =>setSearchInput(e.target.value)} value = {searchInput} className = 'input' />
         <button type='submit' className = 'btn'>Search</button>
       </form>
       <div className='card-container'>
