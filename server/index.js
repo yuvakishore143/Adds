@@ -53,12 +53,6 @@ const Company = mongoose.model('CompanyNames', CompanySchema , "CompanyNames");
 
 app.post('/', async(req,res)=>{
     const val = req.body.searchVal;
-    console.log(val)
-    // const allUsers = await Adds.aggregate([{$lookup : {from : 'CompanyNames' , localField : 'companyId' , foreignField :'_id'  , as : 'Company' }} ,
-    //                             {$unwind : '$Company'},
-    //                             {$match : {$or : [{"description" : new RegExp(val, "i")},{"headline" : new RegExp(val, "i")},{"primaryText" : new RegExp(val, "i")} , {"Company.companyName"  : new RegExp(val, "i")}]}}
-    //                         ]);
-
     const allUsers = await Company.aggregate([
         {
           $lookup: {
